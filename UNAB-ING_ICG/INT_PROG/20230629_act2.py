@@ -57,14 +57,17 @@ def get_prop():
     props = make_data()
     return props
 
+
 def main():
+    props = get_prop()
     print("Bienvenido al sistema de consultas de información sobre propietarios de autos.")
 
-    props = get_prop()
-
+    print("Los ruts disponibles a consultar son:\n")
+    for i in props:
+        print(f"{i.rut}")
 
     while True:
-        rut = input("Favor ingrese el rut a consultar.\nIngrese 's' para salir.\n")
+        rut = input("\nFavor ingrese el rut a consultar.\nIngrese 's' para salir.\n")
         resp = buscar_prop(rut, props)
 
         if rut=="s":
