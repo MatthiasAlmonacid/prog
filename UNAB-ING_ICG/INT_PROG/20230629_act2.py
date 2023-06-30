@@ -74,7 +74,7 @@ def main():
             break;
 
     if resp == 0 and rut != "s":
-        print("No se encontraron propietarios aisgnados al rut ingresados")
+        print("No se encontraron propietarios asignados al rut ingresado.")
 
     elif rut == "s":
         print("Ha decidido salir del programa.")
